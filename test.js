@@ -18,3 +18,17 @@ test('versionsFromFilenames()', t => {
   };
   t.deepEqual(actual, expected);
 });
+
+test('versionsFromFilenames() on empty array', t => {
+  const actual = versionsFromFilenames([]);
+  const expected = {};
+  t.deepEqual(actual, expected);
+});
+
+test('versionsFromFilenames() ignores none-valid semver versions', t => {
+  const actual = versionsFromFilenames([
+    'should-be-ignored'
+  ]);
+  const expected = {};
+  t.deepEqual(actual, expected);
+});

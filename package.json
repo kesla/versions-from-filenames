@@ -29,5 +29,8 @@
     "semistandard": "^8.0.0",
     "snazzy": "^4.0.0",
     "tapava": "^2.1.4"
+  },
+  "dependencies": {
+    "semver": "^5.1.0"
   }
 }
